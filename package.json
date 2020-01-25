@@ -2,7 +2,7 @@
   "name": "vsc-zen-terminal-button",
   "displayName": "Zen Mode with Show Terminal Button",
   "description": "Adds a button to editors that enables Zen Mode and shows the integrated Terminal in one command.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "SEE LICENSE IN LICENSE.txt",
   "publisher": "sketchbuch",
   "main": "./out/extension.js",
