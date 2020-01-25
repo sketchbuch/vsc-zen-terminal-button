@@ -3,9 +3,19 @@
   "displayName": "Zen Mode with Show Terminal Button",
   "description": "Adds a button to editors that enables Zen Mode and shows the integrated Terminal in one command.",
   "version": "1.0.0",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "publisher": "sketchbuch",
+  "main": "./out/extension.js",
+  "icon": "logo.png",
   "activationEvents": [
     "onCommand:vsc-zen-terminal-button.toggleZenTerminal"
   ],
+  "author": {
+    "name": "sketchbuch"
+  },
+  "bugs": {
+    "url": "https://github.com/sketchbuch/vsc-zen-terminal-button/issues"
+  },
   "categories": [
     "Other"
   ],
@@ -31,7 +41,10 @@
     "terminal",
     "zen"
   ],
-  "main": "./out/extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sketchbuch/vsc-zen-terminal-button"
+  },
   "scripts": {
     "audit-html": "yarn audit --json | yarn-audit-html --output audit-report.html",
     "compile": "tsc -p ./",
