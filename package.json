@@ -1,0 +1,63 @@
+{
+  "name": "vsc-zen-terminal-button",
+  "displayName": "Zen Mode with Show Terminal Button",
+  "description": "Adds a button to editors that enables Zen Mode and shows the integrated Terminal in one command.",
+  "version": "1.0.0",
+  "activationEvents": [
+    "onCommand:vsc-zen-terminal-button.toggleZenTerminal"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^2.2.42",
+    "@types/node": "^10.12.21",
+    "@types/sinon": "^7.0.13",
+    "chai": "^4.2.0",
+    "commitlint": "^8.3.5",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "sinon": "^7.3.2",
+    "tslint": "^5.12.1",
+    "typescript": "^3.3.1",
+    "vscode": "^1.1.28",
+    "yarn-audit-html": "^1.1.0"
+  },
+  "engines": {
+    "vscode": "^1.41.0"
+  },
+  "keywords": [
+    "terminal",
+    "zen"
+  ],
+  "main": "./out/extension.js",
+  "scripts": {
+    "audit-html": "yarn audit --json | yarn-audit-html --output audit-report.html",
+    "compile": "tsc -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "yarn run compile && node ./node_modules/vscode/bin/test",
+    "vscode:prepublish": "yarn run compile",
+    "watch": "tsc -watch -p ./"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "vsc-zen-terminal-button.toggleZenTerminal",
+        "icon": {
+          "light": "./resources/images/light/btn-zen.svg",
+          "dark": "./resources/images/dark/btn-zen.svg"
+        },
+        "title": "Toggle Zen Mode and show integrated Terminal"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "vsc-zen-terminal-button.toggleZenTerminal",
+          "group": "navigation"
+        }
+      ]
+    }
+  }
+}
