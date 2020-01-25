@@ -48,6 +48,8 @@
   "scripts": {
     "audit-html": "yarn audit --json | yarn-audit-html --output audit-report.html",
     "compile": "tsc -p ./",
+    "lint:prettier": "prettier --write --config ./.prettierrc.js './{src, resources/js}/**/*.{js,ts}'",
+    "lint:ts": "tslint --config ./tslint.json --fix './src/**/*.ts' --exclude './src/test/**/*'",
     "postinstall": "node ./node_modules/vscode/bin/install",
     "test": "yarn run compile && node ./node_modules/vscode/bin/test",
     "vscode:prepublish": "yarn run compile",
@@ -72,5 +74,19 @@
         }
       ]
     }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "lint-staged",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts}": [
+      "yarn lint:ts",
+      "yarn lint:prettier",
+      "git add"
+    ]
   }
 }
