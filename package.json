@@ -22,7 +22,7 @@
   "devDependencies": {
     "@types/chai": "^4.1.7",
     "@types/mocha": "^2.2.42",
-    "@types/node": "^13.9.0",
+    "@types/node": "^13.9.5",
     "@types/sinon": "^7.0.13",
     "chai": "^4.2.0",
     "commitlint": "^8.3.5",
