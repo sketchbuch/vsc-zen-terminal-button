@@ -23,7 +23,7 @@
     "@types/chai": "^4.1.7",
     "@types/mocha": "^2.2.42",
     "@types/node": "^13.9.0",
-    "@types/sinon": "^7.0.13",
+    "@types/sinon": "^9.0.0",
     "chai": "^4.2.0",
     "commitlint": "^8.3.5",
     "lint-staged": "^9.5.0",
