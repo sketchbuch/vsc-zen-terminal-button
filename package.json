@@ -63,7 +63,7 @@
           "light": "./resources/images/light/btn-zen.svg",
           "dark": "./resources/images/dark/btn-zen.svg"
         },
-        "title": "Toggle Zen Mode and show integrated Terminal"
+        "title": "%btn.toggleZen%"
       }
     ],
     "menus": {
